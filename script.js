@@ -156,11 +156,11 @@ var updateSidebar = function(marker) {
 
         if (d[idx]) {
 
-          // var source = "<em class='normal'>" + d[idx + 'Source'] + '</em>';
+           var source = "<em class='normal'>" + d[idx + 'Source'] + '</em>';
 
-          // if (source && d[idx + 'SourceLink']) {
-          //   source = "<a href='" + d[idx + 'SourceLink'] + "' target='_blank'>" + source + "</a>";
-          // }
+           if (source && d[idx + 'SourceLink']) {
+             source = "<a href='" + d[idx + 'SourceLink'] + "' target='_blank'>" + source + "</a>";
+           }
 
           var a = $('<a/>', {
             href: d[idx],
@@ -419,11 +419,11 @@ function onEachFeature(feature, layer) {
   map.getPane('pane_PohonAdopsiMinastahura_4').style.zIndex = 1;
   map.getPane('pane_PohonAdopsiMinastahura_4').style['mix-blend-mode'] = 'normal';
 
-  layer_BatasKawasan = L.geoJson(json_BatasKawasanTahuraSultanSyarifQasim_3,{
+  layer_BatasKawasan = L.geoJson(bataskawasansuligibatugajah,{
     attribution: '',
     interactive: true,
-    dataVar: 'json_BatasKawasanTahuraSultanSyarifQasim_3',
-    layerName: 'layer_BatasKawasanTahuraSultanSyarifQasim_3',
+    dataVar: 'bataskawasansuligibatugajah',
+    layerName: 'bataskawasansuligibatugajah',
     style: style_bataskawasan,
     onEachFeature: onEachFeature,
     //pane: 'pane_PohonAdopsiMinastahura_4'
@@ -441,7 +441,7 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
    this._div.innerHTML = '<h4>Daerah</h4>' + (props ?
-      props.kabupat
+      props.KABUPATEN
       : '');
 };
 info.addTo(map);
