@@ -251,7 +251,7 @@ var addMarkers = function(data) {
     groups[g].addTo(map);
   }
   
-  L.control.layers({}, groups, {collapsed: true, position: 'bottomright'}).addTo(map);
+  L.control.layers({}, groups, {collapsed: true, position: 'topright'}).addTo(map);
   //$('.leaflet-control-layers-overlays').prepend('<h3 class="mt0 mb1 f5 black-30">Legend</h3>');
 
   // If name in hash, activate it
@@ -431,20 +431,20 @@ function onEachFeature(feature, layer) {
   map.addLayer(layer_BatasKawasan);
 
 //Get "kabupat" from Geojsonfile for area information when hovered
-var info = L.control();
-info.onAdd = function (map) {
-   this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-   this.update();
-   return this._div;
-};
+//var info = L.control();
+//info.onAdd = function (map) {
+   //this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+   //this.update();
+   //return this._div;
+//};
 
 // method that we will use to update the control based on feature properties passed
-info.update = function (props) {
-   this._div.innerHTML = '<h4>Daerah</h4>' + (props ?
-      props.KABUPATEN
-      : '');
-};
-info.addTo(map);
+//info.update = function (props) {
+   //this._div.innerHTML = '<h4>Daerah</h4>' + (props ?
+      //props.KABUPATEN
+      //: '');
+//};
+//info.addTo(map);
 
   //group basemaps
   basemaps= {

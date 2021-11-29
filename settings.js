@@ -3,8 +3,8 @@
 const dataLocation = 'data/KPH_Suligi Batu Gajah.csv';
 
 // Map's initial center, and zoom level
-const mapCenter = [0.6020, 100.616];
-const mapZoom = 12;
+const mapCenter = [0.55304, 100.54540];
+const mapZoom = 16;
 
 // Marker icon height and width
 const iconHeight = 30;
